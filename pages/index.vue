@@ -32,6 +32,10 @@ export default {};
 
   .some-text {
     color: $green;
+
+    @include tablets {
+      color: $black;
+    }
   }
 }
 
