@@ -2,7 +2,7 @@
 .container
   div
     logo
-    h1.title soulful-workshop-change2
+    h1.title soulful-workshop-change3
     .links
       a.button--green(
         href="https://nuxtjs.org/",
@@ -13,12 +13,18 @@
         href="https://github.com/nuxt/nuxt.js",
         target="_blank",
         rel="noopener noreferrer"
-      ) GitHub!!!!!!
-      .some-text Some content
+      ) GitHub
+      .some-text {{ dataString }}
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      dataString: "string",
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
