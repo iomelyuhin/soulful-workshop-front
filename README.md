@@ -1,5 +1,20 @@
 # soulful-workshop
 
+## Clone Repo
+```bash
+# clone repo
+$ git clone https://github.com/iomelyuhin/soulful-workshop-front.git
+
+# add origin
+$ git remote add origin https://github.com/iomelyuhin/soulful-workshop-front.git
+
+# push & deploy to gh-pages (first times)
+$ git push -u origin master
+
+# push & deploy to gh-pages (usually)
+$ git push
+```
+
 ## Build Setup
 
 ```bash
