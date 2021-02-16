@@ -2,7 +2,7 @@
 .container
   div
     logo
-    h1.title soulful-workshop-change
+    h1.title soulful-workshop-change2
     .links
       a.button--green(
         href="https://nuxtjs.org/",
