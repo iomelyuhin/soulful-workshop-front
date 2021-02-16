@@ -31,7 +31,7 @@ export default {};
   text-align: center;
 
   .some-text {
-    color: red;
+    color: $green;
   }
 }
 
