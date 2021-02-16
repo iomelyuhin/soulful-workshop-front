@@ -13,7 +13,7 @@
         href="https://github.com/nuxt/nuxt.js",
         target="_blank",
         rel="noopener noreferrer"
-      ) GitHub!
+      ) GitHub!!
       .some-text Some content
 </template>
 
