@@ -40,5 +40,10 @@ export default {
   modules: ["@nuxtjs/style-resources"],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
+  build: {},
+
+  // Storybook options
+  storybook: {
+    // Options
+  }
 };
