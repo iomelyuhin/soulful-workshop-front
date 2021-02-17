@@ -45,5 +45,11 @@ export default {
   // Storybook options
   storybook: {
     // Options
+    storybook: {
+      addons: [
+        // '@storybook/addon-controls',
+        // '@storybook/addon-notes',
+      ]
+    }
   }
 };
