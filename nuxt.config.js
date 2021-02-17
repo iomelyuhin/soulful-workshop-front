@@ -47,8 +47,8 @@ export default {
     // Options
     storybook: {
       addons: [
-        // '@storybook/addon-controls',
-        // '@storybook/addon-notes',
+        '@storybook/addon-actions',
+        '@storybook/addon-storysource'
       ]
     }
   }
