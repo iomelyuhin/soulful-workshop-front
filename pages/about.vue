@@ -10,7 +10,7 @@
 export default {
   data() {
     return {
-      desc: "string of desc",
+      desc: "string of desc test",
     };
   },
 }
