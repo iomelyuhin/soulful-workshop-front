@@ -15,6 +15,7 @@
         rel="noopener noreferrer"
       ) GitHub
       .some-text {{ dataString }}
+      nuxt-link(to="about" no-prefetch) To about
 </template>
 
 <script>
