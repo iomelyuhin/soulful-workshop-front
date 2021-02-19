@@ -2,8 +2,8 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   target: "static",
   router: {
-    // base: "/"
-    base: "/soulful-workshop-front/"
+    base: "/"
+    // base: "/soulful-workshop-front/"
   },
   head: {
     title: "soulful-workshop",
@@ -38,7 +38,10 @@ export default {
   buildModules: [],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/style-resources"],
+  modules: [
+    "@nuxtjs/style-resources",
+    "nuxt-i18n"
+  ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
@@ -52,5 +55,14 @@ export default {
         '@storybook/addon-storysource'
       ]
     }
-  }
+  },
+  i18n: { 
+    vueI18nLoader: true,
+    strategy: 'prefix_except_default',
+    defaultLocale: 'en',
+    locales: [
+      'ja',
+      'en',  // Make sure that default locale is the last one!
+    ]
+  },
 };

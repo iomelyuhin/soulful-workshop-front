@@ -1,7 +1,18 @@
+<i18n>
+{
+  "en": {
+    "hello world!": "hello world!"
+  },
+  "ja": {
+    "hello world!": "こんにちは、世界!"
+  }
+}
+</i18n>
 <template lang="pug">
 .container
   div
     logo
+    h1.title {{ $t('hello world!') }}
     h1.title soulful-workshop-change3
     .links
       a.button--green(
@@ -15,7 +26,9 @@
         rel="noopener noreferrer"
       ) GitHub
       .some-text {{ dataString }}
-      nuxt-link(to="about" no-prefetch) To about
+      nuxt-link(:to="localePath('about')" no-prefetch) To about
+      nuxt-link(:to="switchLocalePath('ja')") Japan
+      nuxt-link(:to="switchLocalePath('en')") En
 </template>
 
 <script>
