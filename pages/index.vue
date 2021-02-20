@@ -1,17 +1,12 @@
-<i18n>
-{
-  "en": {
-    "hello world!": "hello world!"
-  },
-  "ja": {
-    "hello world!": "こんにちは、世界!"
-  }
-}
-</i18n>
+
 <template lang="pug">
 .container
   div
     logo
+    mainButton(
+      @clickAction="sayHello()"
+      v-bind="{type: 'primary',round: true,text: $t('hello world!')}"
+    ) 
     h1.title {{ $t('hello world!') }}
     h1.title soulful-workshop-change3
     .links
@@ -38,6 +33,11 @@ export default {
       dataString: "string",
     };
   },
+  methods: {
+    sayHello() {
+      alert("hello!")
+    }
+  }
 };
 </script>
 
@@ -81,3 +81,14 @@ export default {
   padding-top: 15px;
 }
 </style>
+
+<i18n>
+{
+  "en": {
+    "hello world!": "hello world!"
+  },
+  "ja": {
+    "hello world!": "こんにちは、世界!"
+  }
+}
+</i18n>

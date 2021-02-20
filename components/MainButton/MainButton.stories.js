@@ -1,4 +1,4 @@
-import MyButton from './MyButton'
+import MainButton from './MainButton'
 import { action } from "@storybook/addon-actions";
 
 const methods = {
@@ -6,8 +6,8 @@ const methods = {
 }
 
 export default {
-    title: 'Button',
-    component: MyButton,
+    title: 'Кнопка',
+    component: MainButton,
     argTypes: {
         type: {
           control: {
@@ -25,8 +25,8 @@ export default {
 }
 
 export const Button = (arg, { argTypes }) => ({
-    components: { MyButton },
+    components: { MainButton },
     props: Object.keys(argTypes),
-    template: '<MyButton @clickAction="onClickAction" v-bind="$props" />',
+    template: '<MainButton @clickAction="onClickAction" v-bind="$props" />',
     methods
 })

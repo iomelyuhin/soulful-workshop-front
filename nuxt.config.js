@@ -2,31 +2,31 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   target: "static",
   router: {
-    base: "/"
+    base: "/",
     // base: "/soulful-workshop-front/"
   },
   head: {
     title: "soulful-workshop",
     htmlAttrs: {
-      lang: "en"
+      lang: "en",
     },
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" }
+      { hid: "description", name: "description", content: "" },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     "~assets/scss/colors.scss",
     "~assets/scss/media.scss",
-    "~assets/scss/mixins.scss"
+    "~assets/scss/mixins.scss",
   ],
 
   styleResources: {
-    scss: ["./assets/scss/*.scss"]
+    scss: ["./assets/scss/*.scss"],
   },
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -40,7 +40,22 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     "@nuxtjs/style-resources",
-    "nuxt-i18n"
+    "nuxt-i18n",
+    [
+      "nuxt-fontawesome",
+      {
+        imports: [
+          {
+            set: "@fortawesome/free-solid-svg-icons",
+            icons: ["fas"],
+          },
+          {
+            set: "@fortawesome/free-brands-svg-icons",
+            icons: ["fab"],
+          },
+        ],
+      },
+    ],
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -50,19 +65,16 @@ export default {
   storybook: {
     // Options
     storybook: {
-      addons: [
-        '@storybook/addon-actions',
-        '@storybook/addon-storysource'
-      ]
-    }
+      addons: ["@storybook/addon-actions", "@storybook/addon-storysource"],
+    },
   },
-  i18n: { 
+  i18n: {
     vueI18nLoader: true,
-    strategy: 'prefix_except_default',
-    defaultLocale: 'en',
+    strategy: "prefix_except_default",
+    defaultLocale: "en",
     locales: [
-      'ja',
-      'en',  // Make sure that default locale is the last one!
-    ]
+      "ja",
+      "en", // Make sure that default locale is the last one!
+    ],
   },
 };
