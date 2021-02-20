@@ -26,7 +26,7 @@
     <p>{{ $t('hello') }}</p>
     <font-awesome-icon 
       class="example" 
-      :icon="['fab', 'vk']"
+      :icon="['fas', 'angle-down']"
     />
     <p>{{ $t('Nuxt.js comes with a few important components included out of the box, which will be helpful when building your application.') }}</p>
     <nuxt-link 
@@ -34,6 +34,10 @@
     >
       Japan
     </nuxt-link>
+    <font-awesome-icon 
+      class="example" 
+      :icon="['far', 'angry']"
+    />
     <nuxt-link 
       :to="switchLocalePath('en')"
     >

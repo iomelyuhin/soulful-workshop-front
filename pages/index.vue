@@ -23,7 +23,9 @@
       .some-text {{ dataString }}
       nuxt-link(:to="localePath('about')" no-prefetch) To about
       nuxt-link(:to="switchLocalePath('ja')") Japan
+      faIcon(v-bind="{type: 'far', name: 'angry'}")
       nuxt-link(:to="switchLocalePath('en')") En
+    
 </template>
 
 <script>
