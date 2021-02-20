@@ -1,6 +1,6 @@
 <template>
   <font-awesome-icon 
-    :class="iconClass" 
+    :class="className" 
     :icon="[type, name]"
   />
   <!-- <button 
@@ -23,7 +23,7 @@ export default {
       type: String,
       default: 'angle-down'
     },
-    iconClass: {
+    className: {
       type: String,
       default: "icon__picture"
     }

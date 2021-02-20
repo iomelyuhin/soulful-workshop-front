@@ -12,7 +12,7 @@ export default {
       control: "text",
       defaultValue: "angle-down",
     },
-    iconClass: {
+    className: {
       control: "text",
       default: "icon__picture"
     }

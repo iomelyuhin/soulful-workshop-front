@@ -26,6 +26,7 @@
     "nuxt": "^2.14.12",
     "nuxt-fontawesome": "^0.4.0",
     "nuxt-i18n": "^6.20.2",
+    "nuxt-video-player": "^1.0.17",
     "vue": "^2.6.12"
   },
   "devDependencies": {

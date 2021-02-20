@@ -23,36 +23,36 @@
     >
       To index
     </nuxt-link>
-    <p>{{ $t('hello') }}</p>
-    <font-awesome-icon 
-      class="example" 
-      :icon="['fas', 'angle-down']"
-    />
+    <p>{{ $t('hello world!') }}</p>
+    <faIcon v-bind="{name: 'accessible-icon', type: 'fab', className: 'about-icon'}" />
     <p>{{ $t('Nuxt.js comes with a few important components included out of the box, which will be helpful when building your application.') }}</p>
     <nuxt-link 
       :to="switchLocalePath('ja')"
     >
       Japan
     </nuxt-link>
-    <font-awesome-icon 
-      class="example" 
-      :icon="['far', 'angry']"
-    />
     <nuxt-link 
       :to="switchLocalePath('en')"
     >
       En
     </nuxt-link>
+    <add-video v-bind="{src: videoSrc, className: videoClass}" />
   </div>
 </template>
 
 <script>
+import AddVideo from '../components/AddVideo/AddVideo.vue';
+
 export default {
+  components: { AddVideo },
   data() {
     return {
       desc: "string of desc test",
+      videoSrc: "https://www.youtube.com/embed/1jPhoG108ww",
+      videoClass: "video-class"
     };
   },
+  
 }
 </script>
 

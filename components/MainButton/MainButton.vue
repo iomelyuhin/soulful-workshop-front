@@ -24,6 +24,10 @@ export default {
       default: 'Button'
     }
   },
+  emits: {
+    // No validation
+    clickAction: null,
+  },
   computed: {
     btnClass () {
       const classes = []

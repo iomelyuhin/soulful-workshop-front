@@ -4,6 +4,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  loading: '~/components/loading.vue'
+}
+</script>
+
 <style>
 html {
   font-family:

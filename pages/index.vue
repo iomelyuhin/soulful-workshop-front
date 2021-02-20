@@ -23,13 +23,15 @@
       .some-text {{ dataString }}
       nuxt-link(:to="localePath('about')" no-prefetch) To about
       nuxt-link(:to="switchLocalePath('ja')") Japan
-      faIcon(v-bind="{type: 'far', name: 'angry'}")
+      faIcon(v-bind="{type: 'far', name: 'angry', className: 'icon'}")
+      
       nuxt-link(:to="switchLocalePath('en')") En
     
 </template>
 
 <script>
 export default {
+  loading: '~/components/loading.vue',
   data() {
     return {
       dataString: "string",
