@@ -41,25 +41,7 @@ export default {
   modules: [
     "@nuxtjs/style-resources",
     "nuxt-i18n",
-    [
-      "nuxt-fontawesome",
-      {
-        imports: [
-          {
-            set: "@fortawesome/free-solid-svg-icons",
-            icons: ["fas"],
-          },
-          {
-            set: "@fortawesome/free-brands-svg-icons",
-            icons: ["fab"],
-          },
-          {
-            set: '@fortawesome/free-regular-svg-icons',
-            icons: ['far']
-          }
-        ],
-      },
-    ],
+    '@nuxtjs/svg-sprite',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -75,10 +57,13 @@ export default {
   i18n: {
     vueI18nLoader: true,
     strategy: "prefix_except_default",
-    defaultLocale: "en",
+    defaultLocale: "ru",
     locales: [
-      "ja",
+      "ru",
       "en", // Make sure that default locale is the last one!
     ],
   },
+  svgSprite: {
+    // manipulate module options
+  }
 };

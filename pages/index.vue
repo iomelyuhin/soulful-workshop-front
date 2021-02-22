@@ -7,7 +7,8 @@
       @clickAction="sayHello()"
       v-bind="{type: 'primary',round: true,text: $t('hello world!')}"
     ) 
-    h1.title {{ $t('hello world!') }}
+    h1.title {{ $t('Привет мир!') }}
+    svg-icon(name="plane")
     h1.title soulful-workshop-change3
     .links
       a.button--green(
@@ -22,10 +23,10 @@
       ) GitHub
       .some-text {{ dataString }}
       nuxt-link(:to="localePath('about')" no-prefetch) To about
-      nuxt-link(:to="switchLocalePath('ja')") Japan
+      nuxt-link(:to="switchLocalePath('en')") English
       faIcon(v-bind="{type: 'far', name: 'angry', className: 'icon'}")
       
-      nuxt-link(:to="switchLocalePath('en')") En
+      nuxt-link(:to="switchLocalePath('ru')") Ru
     
 </template>
 
@@ -84,15 +85,16 @@ export default {
 .links {
   padding-top: 15px;
 }
+
 </style>
 
 <i18n>
 {
   "en": {
-    "hello world!": "hello world!"
+    "Привет мир!": "hello world!"
   },
-  "ja": {
-    "hello world!": "こんにちは、世界!"
+  "ru": {
+    "Привет мир!": "Привет мир!"
   }
 }
 </i18n>

@@ -17,14 +17,9 @@
     "lint"
   ],
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.34",
-    "@fortawesome/free-brands-svg-icons": "^5.15.2",
-    "@fortawesome/free-regular-svg-icons": "^5.15.2",
-    "@fortawesome/free-solid-svg-icons": "^5.15.2",
-    "@fortawesome/vue-fontawesome": "^2.0.2",
+    "@nuxtjs/svg-sprite": "^0.5.2",
     "core-js": "^3.8.3",
     "nuxt": "^2.14.12",
-    "nuxt-fontawesome": "^0.4.0",
     "nuxt-i18n": "^6.20.2",
     "nuxt-video-player": "^1.0.17",
     "vue": "^2.6.12"
