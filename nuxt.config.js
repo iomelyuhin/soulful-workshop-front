@@ -15,14 +15,22 @@ export default {
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { hid: "description", name: "description", content: "" },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap'
+      }
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     "~assets/scss/colors.scss",
+    "~assets/scss/fonts.scss",
     "~assets/scss/media.scss",
     "~assets/scss/mixins.scss",
+    "~assets/scss/base.scss",
   ],
 
   styleResources: {
@@ -51,7 +59,11 @@ export default {
   storybook: {
     // Options
     storybook: {
-      addons: ["@storybook/addon-actions", "@storybook/addon-storysource"],
+      addons: [
+        "@storybook/addon-actions", 
+        "@storybook/addon-storysource",
+        "storypug"
+      ],
     },
   },
   i18n: {

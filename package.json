@@ -38,8 +38,10 @@
     "pre-commit": "^1.2.2",
     "pug": "^3.0.0",
     "pug-plain-loader": "^1.1.0",
+    "pug-runtime": "^3.0.0",
     "push-dir": "^0.4.1",
     "sass": "^1.32.7",
-    "sass-loader": "10"
+    "sass-loader": "10",
+    "storypug": "^1.0.0-rc.8"
   }
 }

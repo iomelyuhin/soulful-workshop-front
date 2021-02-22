@@ -1,0 +1,69 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+main {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+	background-color: transparent;
+	color: #211710;
+	&:active {
+		color: #211710;
+	}
+	&:visited {
+		color: rgba(#211710, 0.85);
+	}
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  background-color: none;
+  border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  margin: 0; /* 2 */
+}
+
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+.container {
+  width: 95%;
+  max-width: 1350px;
+  margin: 0 auto;
+}

@@ -1,80 +1,66 @@
-<template>
-  <button 
-    class="font-bold py-2 px-4 text-white"
-    :class="btnClass" 
-    @click.prevent="$emit('clickAction', text)"
-  >
-    <slot>{{ text }}</slot>
-  </button>
+<template lang="pug">
+button.btn(
+  :class="btnClass", 
+  @click.prevent="$emit('pushTheButton', $event)"
+)
+  slot {{ text }}
 </template>
 
 <script>
 export default {
   props: {
-    round: {
-      type: Boolean,
-      default: false
-    },
     type: {
       type: String,
-      default: 'primary'
+      default: "primary",
     },
     text: {
       type: String,
-      default: 'Button'
-    }
+      default: "Button",
+    },
   },
   emits: {
-    // No validation
-    clickAction: null,
+    pushTheButton: null,
   },
   computed: {
-    btnClass () {
-      const classes = []
-      if (this.round) {
-        classes.push('rounded-full')
+    btnClass() {
+      const classes = [];
+      if (this.type === "primary") {
+        classes.push("btn--primary");
+      } else if (this.type === "secondary") {
+        classes.push("btn--secondary");
       }
-      if (this.type === 'primary') {
-        classes.push('bg-blue-500 hover:bg-blue-700')
-      } else if (this.type === 'secondary') {
-        classes.push('bg-gray-500 hover:bg-gray-700')
-      }
-      return classes.join(' ')
-    }
-  }
-}
+      return classes.join(" ");
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
+.btn {
+  font: $btn-text;
+  padding: 15px 30px;
+  text-transform: uppercase;
 
-  button {
-    padding: 30px 40px;
-    text-transform: uppercase;
-    font-size: 20px;
-    background-color: lightcoral;
-    border: none;
-    font-weight: bold;
-    color: #fff;
-  }
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
 
-  .rounded-full {
-    border-radius: 100px;
-  }
-
-  .bg-blue-500 {
-    background-color: rgba(blue, 0.5);
-
+  &--primary {
+    background-color: $dark;
+    color: $light;
     &:hover {
-      background-color: rgba(blue, 0.7);
+      background-color: rgba($dark, 0.85);
     }
   }
 
-  .bg-gray-500 {
-    background-color: rgba(rgb(56, 56, 56), 0.5);
-
+  &--secondary {
+    background-color: transparent;
+    color: $dark;
+    border: 3px solid $dark;
     &:hover {
-      background-color: rgba(56, 56, 56, 0.7);
+      background-color: $dark;
+      color: $light
     }
-
   }
+}
 </style>
