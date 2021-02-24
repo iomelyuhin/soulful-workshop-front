@@ -2,8 +2,17 @@
   header.header
     .header__container.container
       nuxt-link(:to="localePath('/')" no-prefetch).logo.logo--dark
-      nav.header__navigation.header__navigation--navigation
-        navigation(:navigationList="navList", :mode="light")
+      .header__middle
+        nav.header__navigation.header__navigation--navigation
+          navigation(:navigationList="navList", :mode="light")
+        .header__languages-switcher
+          nuxt-link.header__languages-switcher-link(
+            :to="switchLocalePath('ru')"
+          ) RU
+          span /
+          nuxt-link.header__languages-switcher-link(
+            :to="switchLocalePath('en')"
+          ) EN
       cart(:qty="2")
 </template>
 
@@ -31,6 +40,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.header {
+  padding: 22px 0;
+}
+
 .logo {
   display: flex;
   width: 200px;
@@ -47,5 +61,20 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.header__middle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 46px;
+}
+
+.header__languages-switcher-link {
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 </style>

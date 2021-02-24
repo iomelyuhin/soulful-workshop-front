@@ -1,9 +1,7 @@
 <template>
   <video-player 
     :src="src" 
-    :allow-fullscreen="false" 
     :preload="false"
-    :container-styles="className" 
   />
 </template>
 
@@ -19,12 +17,7 @@ export default {
     src: {
       type: String,
       default: "https://www.youtube.com/embed/E_Jbf73lH8g"
-    },
-    className: {
-      type: String,
-      default: "video-player"
-    },
-
+    }
   }
 }
 </script>

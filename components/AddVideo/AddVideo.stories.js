@@ -7,10 +7,6 @@ export default {
     src: {
       control: "text",
       defaultValue: "https://www.youtube.com/embed/E_Jbf73lH8g",
-    },
-    className: {
-      control: "text",
-      default: "video-player"
     }
   },
 };

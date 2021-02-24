@@ -39,8 +39,9 @@ export default {
 .navigation__item-title {
   font-size: 20px;
   text-transform: uppercase;
-  font-weight: $semi-bold;
+  font-weight: $regular;
   transition: 0.3s;
+  letter-spacing: 1px;
 
   &:hover {
     color: rgba($dark, 0.5)

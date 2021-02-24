@@ -36,6 +36,11 @@ export default {
   position: relative;
   width: 41px;
   height: 40px;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .cart__icon-pic {

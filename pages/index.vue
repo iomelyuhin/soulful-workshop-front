@@ -1,38 +1,27 @@
 
 <template lang="pug">
-  div
-    svg-icon(name="plane")
-    h1.title soulful-workshop-change3
-    .links
-      a.button--green(
-        href="https://nuxtjs.org/",
-        target="_blank",
-        rel="noopener noreferrer"
-      ) Documentation
-      a.button--grey(
-        href="https://github.com/nuxt/nuxt.js",
-        target="_blank",
-        rel="noopener noreferrer"
-      ) GitHub
-      .some-text {{ dataString }}
-      nuxt-link(:to="localePath('about')" no-prefetch) To about
-      nuxt-link(:to="switchLocalePath('en')") English
-      nuxt-link(:to="switchLocalePath('ru')") Ru
-    
+  main
+    hero
+    about
+    overview
+    package
+    delivery
 </template>
 
 <script>
 export default {
   loading: '~/components/loading.vue',
+  components: {
+    hero: () => import('../components/includes/index/hero'),
+    about: () => import('../components/includes/index/about'),
+    overview: () => import('../components/includes/index/overview'),
+    package: () => import('../components/includes/index/package'),
+    delivery: () => import('../components/includes/index/delivery')
+  },
   data() {
     return {
       dataString: "string",
     };
-  },
-  methods: {
-    sayHello() {
-      alert("hello!")
-    }
   }
 };
 </script>

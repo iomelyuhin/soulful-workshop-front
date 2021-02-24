@@ -13,9 +13,6 @@
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
-  "pre-commit": [
-    "lint"
-  ],
   "dependencies": {
     "@nuxtjs/svg-sprite": "^0.5.2",
     "core-js": "^3.8.3",
