@@ -6,6 +6,7 @@
     overview
     package
     delivery
+    productsSlider
 </template>
 
 <script>
@@ -16,7 +17,8 @@ export default {
     about: () => import('../components/includes/index/about'),
     overview: () => import('../components/includes/index/overview'),
     package: () => import('../components/includes/index/package'),
-    delivery: () => import('../components/includes/index/delivery')
+    delivery: () => import('../components/includes/index/delivery'),
+    productsSlider: () => import('../components/includes/index/productsSlider')
   },
   data() {
     return {

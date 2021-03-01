@@ -4,7 +4,7 @@
       nuxt-link(:to="localePath('/')" no-prefetch).logo.logo--dark
       .header__middle
         nav.header__navigation.header__navigation--navigation
-          navigation(:navigationList="navList", :mode="light")
+          navigation(v-bind='{"navigationList": navList, "mode": "light"}')
         .header__languages-switcher
           nuxt-link.header__languages-switcher-link(
             :to="switchLocalePath('ru')"
@@ -13,7 +13,7 @@
           nuxt-link.header__languages-switcher-link(
             :to="switchLocalePath('en')"
           ) EN
-      cart(:qty="2")
+      cart(:qty="0")
 </template>
 
 <script>

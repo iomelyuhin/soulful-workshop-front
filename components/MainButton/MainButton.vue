@@ -26,8 +26,14 @@ export default {
       const classes = [];
       if (this.type === "primary") {
         classes.push("btn--primary");
+      } else if (this.type === "primary-small") {
+        classes.push("btn--primary-small");
       } else if (this.type === "secondary") {
         classes.push("btn--secondary");
+      } else if (this.type === "secondary-small") {
+        classes.push("btn--secondary-small");
+      } else if (this.type === "secondary-small-disabled") {
+        classes.push("btn--secondary-small-disabled");
       }
       return classes.join(" ");
     },
@@ -53,6 +59,17 @@ export default {
     }
   }
 
+  &--primary-small {
+    background-color: $dark;
+    color: $light;
+    padding: 10px 25px;
+    font-size: 14px;
+
+    &:hover {
+      background-color: rgba($dark, 0.85);
+    }
+  }
+
   &--secondary {
     background-color: transparent;
     color: $dark;
@@ -61,6 +78,23 @@ export default {
       background-color: $dark;
       color: $light
     }
+  }
+
+  &--secondary-small {
+    background-color: transparent;
+    color: $dark;
+    border: 3px solid $dark;
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+
+  &--secondary-small-disabled {
+    background-color: transparent;
+    color: $dark;
+    border: 3px solid $dark;
+    padding: 10px 25px;
+    font-size: 14px;
+    cursor: initial;
   }
 }
 </style>

@@ -16,7 +16,7 @@
 export default {
   props: {
     qty: {
-      type: String,
+      type: Number,
       default: "0",
     },
   },

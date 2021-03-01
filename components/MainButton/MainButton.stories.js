@@ -12,7 +12,13 @@ export default {
     type: {
       control: {
         type: "select",
-        options: ["primary", "secondary"],
+        options: [
+          "primary", 
+          "primary-small", 
+          "secondary", 
+          "secondary-small",
+          "secondary-small-disabled"
+        ],
       },
       defaultValue: "primary",
     },

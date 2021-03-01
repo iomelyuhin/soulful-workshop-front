@@ -1,9 +1,9 @@
 <template lang="pug">
   .package
-    .package__image
-      //- img.package__image-pic(src="~/assets/img/package.jpg")
+    //- img.package__image-pic(src="~/assets/img/package.jpg")
     .package__text
-      .package__text-content Стильная упаковка, которую не стыдно дарить, а распаковывать такой подарок - отдельное эстетическое удовольствие
+      .package__text-content Стильная упаковка, в которой <span>удобно хранить</span> и которую <span>не стыдно дарить</span>
+    .package__image
 
 </template>
 
@@ -11,29 +11,39 @@
 .package {
   display: flex;
   position: relative;
+  background: linear-gradient(180deg, #D6DADD 0%, rgba(221, 225, 227, 0.822917) 45.7%, #E2E5EA 73.33%, #DDE0E5 100%);
+
   // min-height: 500px;
 }
 
 .package__image {
   width: 50%;
-  background-image: url("~assets/img/package.png");
+  background-image: url("~assets/img/package.jpg");
   background-size: contain;
-  // background-repeat: no-repeat;
+  background-repeat: no-repeat;
   background-position-x: right;
+  background-position-y: bottom;
   flex-shrink: 0;
 }
 
 .package__text {
-  padding: 70px 40px 90px 40px;
-  max-width: 600px;
-  background-color: #393938;
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 170px 40px 170px 40px;
+  // background: linear-gradient(180deg, #D6DADD 0%, rgba(221, 225, 227, 0.822917) 45.7%, #E2E5EA 73.33%, #DDE0E5 100%);
 }
 
 .package__text-content {
+  max-width: 600px;
   font-size: 36px;
-  color: $light;
+  color: $dark;
   font-weight: $lite;
-  border: 2px solid $light;
+  border: 5px solid $light;
   padding: 20px;
+
+  span {
+    font-weight: $semi-bold;
+  }
 }
 </style>

@@ -38,8 +38,8 @@ section#about.about
   width: 50%;
   background-image: url('~assets/img/creator.jpg');
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position-x: left;
+  background-size: cover;
+  background-position-x: right;
 
 }
 

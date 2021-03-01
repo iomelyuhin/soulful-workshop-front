@@ -5,7 +5,7 @@ $semi-bold: 600;
 $bold: 700;
 $extra-bold: 800;
 
-h1, h2 {
+h1, h2, h3 {
   letter-spacing: 0.05em;
 }
 
@@ -13,4 +13,17 @@ h2 {
   font-size: 36px;
   font-weight: $semi-bold;
   color: #211710;
+}
+
+h3 {
+  font-weight: $semi-bold;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+html {
+  font-weight: $light;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: $dark;
 }

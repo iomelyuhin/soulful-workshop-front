@@ -2,8 +2,8 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   target: "static",
   router: {
-    // base: "/",
-    base: "/soulful-workshop-front/"
+    base: "/",
+    // base: "/soulful-workshop-front/"
   },
   head: {
     title: "soulful-workshop",
@@ -31,13 +31,14 @@ export default {
     "~assets/scss/media.scss",
     "~assets/scss/mixins.scss",
     "~assets/scss/base.scss",
+    'vue-slick-carousel/dist/vue-slick-carousel.css'
   ],
 
   styleResources: {
     scss: ["./assets/scss/*.scss"],
   },
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [{ src: './plugins/vue-slick-carousel.js' }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
