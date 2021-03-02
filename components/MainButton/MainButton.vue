@@ -91,10 +91,14 @@ export default {
   &--secondary-small-disabled {
     background-color: transparent;
     color: $dark;
-    border: 3px solid $dark;
-    padding: 10px 25px;
+    border: 3px solid transparent;
+    margin: 8px 25px;
+    padding: 0;
     font-size: 14px;
     cursor: initial;
+    text-align: center;
+    border-bottom: 1px solid $dark;
+    cursor: pointer;
   }
 }
 </style>

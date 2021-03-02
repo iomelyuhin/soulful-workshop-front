@@ -1,7 +1,7 @@
 <template lang="pug">
   ul.navigation
     li.navigation__item(
-      v-for="item in navigationList" :key="item"
+      v-for="item in navigationList" :key="item.id"
     )
       nuxt-link(
         :to="localePath(`${item.link}`)"

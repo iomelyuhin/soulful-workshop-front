@@ -22,14 +22,17 @@ export default {
     return {
       navList: [
         {
+          id: 1,
           title: "Главная",
           link: "/"
         },
         {
+          id: 2,
           title: "О мастерской",
           link: "/#about"
         },
         {
+          id: 3,
           title: "Корзина",
           link: "/cart"
         }
